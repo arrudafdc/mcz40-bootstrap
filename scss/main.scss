@@ -1,0 +1,62 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$mcz-principal: #0053BF;
+$mcz-destaque: #FD9800;
+$mcz-agenda: #7C4EF5;
+$mcz-noticia: #16B24C;
+$mcz-foto: #F85CAD;
+
+$custom-colors: (
+  "mcz-principal": $mcz-principal,
+  "mcz-destaque": $mcz-destaque,
+  "mcz-agenda": $mcz-agenda,
+  "mcz-noticia": $mcz-noticia,
+  "mcz-foto": $mcz-foto,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+$font-family-sans-serif: "Poppins";
+$card-border-color: none;
+$card-spacer-x: 0;
+$card-spacer-y: 0.5rem;
+$card-title-spacer-y: 0;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+.nav-link {
+  color: $white;
+}
+.nav-link:hover, .nav-link:focus {
+  color: $mcz-destaque;
+}
+
+.text-shadow {
+  text-shadow: 2px 2px black;
+}
+
+.card-img-top {
+  border-radius: 5px;
+}
+
+footer .nav-link {
+  padding-left: 0;
+}
+
+#nav-contato li {
+  padding: 8px 0;
+}
+
+.bg-min-h {
+  min-height: 250px;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h3 {
+    font-size: 1.25rem;
+  }
+}
